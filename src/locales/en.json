@@ -1,14 +1,25 @@
 {
     "post": {
         "list": {
-            "title": "Lista postów",
-            "empty": "Brak postów",
-            "search": "Wyszukaj tytuł",
+            "title": "List of posts",
+            "empty": "No posts",
+            "search": "Search for title",
             "columns": {
                 "id": "Id",
-                "title": "Tytuł",
-                "body": "Treść",
+                "title": "Title",
+                "body": "Content",
                 "actions": ""
+            },
+            "actions": {
+                "delete": "Delete"
+            }
+        },
+        "modals": {
+            "cancel": "Cancel",
+            "delete": {
+                "title": "Are you sure?",
+                "text": "Are you sure you want to delete the entry",
+                "action_text": "Yes, delete"
             }
         }
     }
