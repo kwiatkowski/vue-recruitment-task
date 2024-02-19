@@ -36,7 +36,8 @@ export default {
         },
         columns: {
             type: Array,
-            default: null
+            default: [],
+            required: true
         }
     },
     methods: {
