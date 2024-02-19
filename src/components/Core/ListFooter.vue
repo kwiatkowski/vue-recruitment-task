@@ -23,16 +23,20 @@
             :value="postPerPage"
             @change="changePostPerPage"
             >
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
+                <option
+                v-for="(option, optionIndex) in listRowOptions"
+                :key="optionIndex"
+                :value="option"
+                v-html="option"
+                ></option>
             </select>
         </div>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     emits: [
         'change-page', 'change-post-per-page'
@@ -50,6 +54,11 @@ export default {
             type: Number,
             default: null
         }
+    },
+    computed: {
+        ...mapState([
+            'listRowOptions'
+        ])
     },
     methods: {
         changePage(page) {
