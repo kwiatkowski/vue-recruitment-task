@@ -8,7 +8,7 @@ Endpoint do postów: https://jsonplaceholder.typicode.com/posts
 Posty mają zostać raz pobrane i później operujemy na nich tylko na froncie.
 Kolumny tabeli Id, Tytuł (title), Treść (body), Akcje (kolumna dla przycisku„usuń” który będzie w dalszej części, na razie pusta)
 
-###### druga:
+###### Część druga:
 Należy wykonać frontową paginację, po 10 wyników. Na dole lista stron, zaznaczona ta, na której się znajdujemy.
 U góry pole type input text z wyszukiwarką ignorująca wielkość liter, w momencie gdy jest włączone wyszukiwanie (zawartość inputa nie jest pusta) to paginacja nie działa (zawsze wyświetlane jest wszystko). Proszę przefiltrować tabelę po tytułach.
 Podpowiedź: do wykonania wyszukiwarki i paginacji można wykorzystać computed.
