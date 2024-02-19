@@ -1,24 +1,22 @@
 <template>
     <div class="list__footer">
-        <div
-        class="pager__wrap"
+        <ul
+        class="pager"
         v-if="totalPages > 1"
         >
-            <ul class="pager">
-                <li
-                class="pager__item"
-                v-for="(page, pageIndex) in totalPages"
-                :key="pageIndex"
-                >
-                    <a
-                    class="pager__link"
-                    :class="{'is-active': page === currentPage}"
-                    v-html="page"
-                    @click="changePage(page)"
-                    ></a>
-                </li>
-            </ul>
-        </div>
+            <li
+            class="pager__item"
+            v-for="(page, pageIndex) in totalPages"
+            :key="pageIndex"
+            >
+                <a
+                class="pager__link"
+                :class="{'is-active': page === currentPage}"
+                v-html="page"
+                @click="changePage(page)"
+                ></a>
+            </li>
+        </ul>
 
         <div class="pager__post-per-page">
             <select
@@ -66,6 +64,7 @@ export default {
 
 <style lang="scss">
 .list__footer {
+    margin: 30px 0;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -85,10 +84,6 @@ export default {
     display: flex;
     padding: 0;
     justify-content: center;
-
-    &__wrap {
-        margin: 30px 0;
-    }
 
     &__item {
         margin: 0 5px;

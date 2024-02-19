@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import {  mapState, mapMutations, mapActions } from 'vuex'
+import { mapState, mapMutations, mapActions } from 'vuex'
 
 import ListSearch from "~/components/Core/ListSearch.vue"
 import ListHeader from "~/components/Core/ListHeader.vue"
